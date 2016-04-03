@@ -8,7 +8,7 @@ function die()
 
 vim_dir="$HOME/.vim"
 
-git clone https://github.com/SebiSujar/myvim $vim_dir \
+git clone --recursive https://github.com/SebiSujar/myvim $vim_dir \
   || die "Could not clone the repository to ${HOME}/.vim"
 
 ln -s $vim_dir $HOME/.vimrc \
