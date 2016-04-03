@@ -6,7 +6,7 @@ function die()
   exit 1
 }
 
-vim_dir = "$HOME/.vim"
+vim_dir="$HOME/.vim"
 
 git clone https://github.com/SebiSujar/myvim $vim_dir \
   || die "Could not clone the repository to ${HOME}/.vim"
