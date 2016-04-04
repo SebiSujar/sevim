@@ -4,6 +4,6 @@
 
 Paste this on your terminal
 ```bash
-curl -L https://bit.ly/sevim-installer | bash
+curl -L https://bit.ly/sevim-install | bash
 ```
 
