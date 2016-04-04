@@ -1,9 +1,9 @@
-#my vim !
+#SeVim
 
 ### Installation
 
 Paste this on your terminal
 ```bash
-curl -L https://bit.ly/ssujar-vim | bash
+curl -L https://bit.ly/sevim-installer | bash
 ```
 
