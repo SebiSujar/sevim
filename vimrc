@@ -2,6 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 let mapleader = ","
+let g:mapleader = ","
 
 "-----------VUNDLE CONFIG--------------"
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -41,6 +42,33 @@ set nu                            "enable line numbers
   " Workaround broken colour highlighting in Haskell
   autocmd FileType haskell,rust setlocal nospell
 
+" }
+
+" PLUGINS {
+  " ctrlP {
+     let g:ctrlp_map = '<c-p>'
+     let g:ctrlp_cmd = 'CtrlP'
+
+     let g:ctrlp_working_path_mode = 'ra'
+  " }
+
+  " airline {
+      set laststatus=2
+  " }
+
+  " neocomplete {
+      let g:neocomplete#enable_at_startup = 1
+      let g:neocomplete#enable_smart_case = 1
+  " }
+
+  " nerdtree {
+    map <leader>n :NERDTreeToggle<CR>
+
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  " }
 " }
 
 
