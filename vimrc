@@ -1,9 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-let mapleader = ","
-let g:mapleader = ","
-
 "-----------VUNDLE CONFIG--------------"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -44,6 +41,25 @@ set nu                            "enable line numbers
 
 " }
 
+" MAPPINGS {
+
+  let mapleader = ","
+  let g:mapleader = ","
+
+  " shift key fixes
+  command! -bang -nargs=* -complete=file E e<bang> <args>
+  command! -bang -nargs=* -complete=file W w<bang> <args>
+  command! -bang -nargs=* -complete=file Wq wq<bang> <args>
+  command! -bang -nargs=* -complete=file WQ wq<bang> <args>
+  command! -bang Wa wa<bang>
+  command! -bang WA wa<bang>
+  command! -bang Q q<bang>
+  command! -bang QA qa<bang>
+  command! -bang Qa qa<bang>
+
+    cmap Tabe tabe
+" }
+
 " PLUGINS {
   " ctrlP {
      let g:ctrlp_map = '<c-p>'
@@ -57,8 +73,12 @@ set nu                            "enable line numbers
   " }
 
   " neocomplete {
+      let g:acp_enableAtStartup = 0
       let g:neocomplete#enable_at_startup = 1
       let g:neocomplete#enable_smart_case = 1
+      let g:neocomplete#enable_auto_delimiter = 1
+      let g:neocomplete#max_list = 15
+      let g:neocomplete#force_overwrite_completefunc = 1
   " }
 
   " nerdtree {
