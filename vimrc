@@ -11,10 +11,17 @@ filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 
-set mouse=a                       " Automatically enable mouse usage
-set mousehide
-syntax on
-set nu                            "enable line numbers
+" GENERAL CONFIG {
+  set mouse=a                     " Automatically enable mouse usage
+  set mousehide
+  syntax on
+  set showmatch                   " Show matching brackets/parenthesis
+  set incsearch                   " Find as you type search
+  set hlsearch                    " Highlight search terms
+  set number                      " enable line numbers
+  set t_Co=256                    " set terminal to 256 colors
+  colorscheme zenburn
+" }
 
 " FORMATTING {
 
@@ -90,9 +97,3 @@ set nu                            "enable line numbers
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
   " }
 " }
-
-
-" set terminal to 256 colors
-set t_Co=256
-
-colorscheme zenburn
