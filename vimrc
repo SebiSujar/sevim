@@ -20,6 +20,7 @@ filetype plugin indent on    " required
   set hlsearch                    " Highlight search terms
   set number                      " enable line numbers
   set t_Co=256                    " set terminal to 256 colors
+  set clipboard=unnamedplus       " share system clipboard
   colorscheme zenburn
 " }
 
