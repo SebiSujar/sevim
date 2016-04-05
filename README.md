@@ -1,5 +1,5 @@
 #SeVim
-_A fancy Vim distribution_
+_A glorious Vim distribution_
 
 ### Installation
 
