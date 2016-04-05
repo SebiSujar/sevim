@@ -12,6 +12,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " GENERAL CONFIG {
+  set backspace=indent,eol,start  " regular backspace (could be improved)
   set mouse=a                     " Automatically enable mouse usage
   set mousehide
   syntax on
@@ -21,6 +22,10 @@ filetype plugin indent on    " required
   set number                      " enable line numbers
   set t_Co=256                    " set terminal to 256 colors
   set clipboard=unnamedplus       " share system clipboard
+  set cursorline                  " highlight current line
+  set showcmd                     " show partial commands
+  set wildmenu                    " show autocomplete list
+  set wildmode=list:longest,full  " completition behaviour
   colorscheme zenburn
 " }
 
