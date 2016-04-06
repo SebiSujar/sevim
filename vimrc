@@ -22,7 +22,7 @@ filetype plugin indent on    " required
   set number                      " enable line numbers
   set t_Co=256                    " set terminal to 256 colors
   set clipboard=unnamedplus       " share system clipboard
-  set cursorline                  " highlight current line
+"  set cursorline                  " highlight current line (ui becomes a little glitchy)
   set showcmd                     " show partial commands
   set wildmenu                    " show autocomplete list
   set wildmode=list:longest,full  " completition behaviour
@@ -92,6 +92,12 @@ filetype plugin indent on    " required
       let g:neocomplete#enable_auto_delimiter = 1
       let g:neocomplete#max_list = 15
       let g:neocomplete#force_overwrite_completefunc = 1
+
+      " <TAB>: completion.
+      inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+      " <C-h>, <BS>: close popup and delete backword char.
+      inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+      inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
   " }
 
   " nerdtree {
