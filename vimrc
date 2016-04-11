@@ -16,16 +16,13 @@ filetype plugin indent on    " required
   set mouse=a                     " Automatically enable mouse usage
   set mousehide
   syntax on
-  set showmatch                   " Show matching brackets/parenthesis
   set incsearch                   " Find as you type search
   set hlsearch                    " Highlight search terms
   set number                      " enable line numbers
   set t_Co=256                    " set terminal to 256 colors
   set clipboard=unnamedplus       " share system clipboard
-"  set cursorline                  " highlight current line (ui becomes a little glitchy)
   set showcmd                     " show partial commands
   set wildmenu                    " show autocomplete list
-  set wildmode=list:longest,full  " completition behaviour
   colorscheme zenburn
 " }
 
