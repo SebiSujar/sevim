@@ -12,9 +12,13 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wellle/targets.vim'
+Plugin 'tpope/vim-endwise'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+"hard mode, only for the brave ones
+Plugin 'wikitopian/hardmode'
 
 "vim snippets and dependencies
 Plugin 'MarcWeber/vim-addon-mw-utils'
