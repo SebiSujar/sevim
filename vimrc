@@ -20,7 +20,6 @@ filetype plugin indent on    " required
   set hlsearch                    " Highlight search terms
   set number                      " enable line numbers
   set t_Co=256                    " set terminal to 256 colors
-  set clipboard=unnamedplus       " share system clipboard
   set showcmd                     " show partial commands
   set wildmenu                    " show autocomplete list
   colorscheme zenburn
@@ -82,21 +81,6 @@ filetype plugin indent on    " required
       set laststatus=2
   " }
 
-  " neocomplete {
-      let g:acp_enableAtStartup = 0
-      let g:neocomplete#enable_at_startup = 1
-      let g:neocomplete#enable_smart_case = 1
-      let g:neocomplete#enable_auto_delimiter = 1
-      let g:neocomplete#max_list = 15
-      let g:neocomplete#force_overwrite_completefunc = 1
-
-      " <TAB>: completion.
-      inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-      " <C-h>, <BS>: close popup and delete backword char.
-      inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-      inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-  " }
-
   " nerdtree {
     map <leader>n :NERDTreeToggle<CR>
 
@@ -104,5 +88,11 @@ filetype plugin indent on    " required
 
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+  " }
+  "
+  " HARDMODE {
+  "    let g:HardMode_level = 'wannabe'
+  "    autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+  "    nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
   " }
 " }
