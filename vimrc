@@ -1,6 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+if $SHELL =~ 'bin/fish'
+  set shell=/bin/bash
+endif
+
 "-----------VUNDLE CONFIG--------------"
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
