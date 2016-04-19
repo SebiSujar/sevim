@@ -22,6 +22,12 @@ vim_dir="$HOME/.vim"
 git clone --recursive https://github.com/SebiSujar/sevim $vim_dir \
   || die "Could not clone the repository to ${HOME}/.vim"
 
+bundle_dir="$vim_dir/bundle"
+mkdir $bundle_dir
+
+git clone https://github.com/VundleVim/Vundle.vim.git $bundle_dir/Vundle.vim \
+  || die "Could not clone Vundle in ${vim_dir}/bundle"
+
 ln -s $vim_dir/vimrc $HOME/.vimrc \
   || die "Could not create symbolic link in ${HOME}"
 
