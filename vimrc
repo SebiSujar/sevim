@@ -33,10 +33,10 @@ filetype plugin indent on    " required
 
   set nowrap                      " Do not wrap long lines
   set autoindent                  " Indent at the same level of the previous line
-  set shiftwidth=2                " Use indents of 4 spaces
-  set expandtab                   " Tabs are spaces, not tabs
+  set shiftwidth=2                " Use indents of 2 spaces
   set tabstop=2                   " An indentation every two columns
   set softtabstop=2               " Let backspace delete indent
+  set expandtab                   " Tabs are spaces, not tabs
   set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
   set splitright                  " Puts new vsplit windows to the right of the current
   set splitbelow                  " Puts new split windows to the bottom of the current
