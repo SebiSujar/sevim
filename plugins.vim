@@ -14,6 +14,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'wellle/targets.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'vim-ruby/vim-ruby'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
