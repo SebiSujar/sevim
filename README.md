@@ -1,4 +1,4 @@
-#SeVim
+# SeVim
 _A glorious Vim distribution_
 
 ### Installation
