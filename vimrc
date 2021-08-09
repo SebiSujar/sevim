@@ -75,6 +75,7 @@ filetype plugin indent on    " required
 " }
 
 " PLUGINS {
+  let g:snipMate = { 'snippet_version' : 1 }
   " ctrlP {
      let g:ctrlp_map = '<c-p>'
      let g:ctrlp_cmd = 'CtrlP'
